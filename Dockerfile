@@ -3,7 +3,7 @@ FROM node:8.6-slim
 
 WORKDIR /usr/src 
 
-COPY package.js ./
+COPY package.json ./
 COPY server.js ./
 
 RUN npm install
