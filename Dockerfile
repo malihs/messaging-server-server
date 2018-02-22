@@ -2,6 +2,7 @@
 FROM node:8.6-slim
 
 RUN mkdir /usr/src/temp
+RUN mkdir /usr/src/server
 WORKDIR /usr/src/temp
 
 COPY package.json .
