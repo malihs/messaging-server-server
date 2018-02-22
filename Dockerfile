@@ -1,11 +1,10 @@
 # todo: replace this with slimer image (using alpine)
 FROM node:8.6-slim
 
-WORKDIR /usr/src
-RUN mkdir -p temp 
+WORKDIR /usr/src 
 
-COPY package.js ./temp
-COPY server.js ./temp
+COPY package.js ./
+COPY server.js ./
 
 RUN npm install
 
