@@ -8,8 +8,8 @@ WORKDIR /usr/src/temp
 COPY package.json .
 COPY server.js .
 
-RUN npm install
+RUN npm install && npm install -g pm2
 
 EXPOSE 4000
 
-CMD [ "npm", "start" ]
+CMD [ "pm2-runtime", "server.js" ]
