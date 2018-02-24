@@ -8,7 +8,7 @@ WORKDIR /usr/src/temp
 COPY package.json .
 COPY server.js .
 
-RUN npm install && npm install -g pm2
+RUN npm install
 
 EXPOSE 4000
 
