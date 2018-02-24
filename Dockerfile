@@ -9,6 +9,7 @@ COPY package.json .
 COPY server.js .
 
 RUN npm install
+RUN npm install pm2 -g
 
 EXPOSE 4000
 
