@@ -6,7 +6,7 @@ RUN mkdir temp
 RUN mkdir server
 
 COPY server.js ./temp
-RUN npm install pm2 experss -g
+RUN npm install pm2 express -g
 
 EXPOSE 4000
 
