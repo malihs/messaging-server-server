@@ -2,6 +2,7 @@
 FROM node:8.6-slim
 
 WORKDIR /usr/src
+RUN mkdir server
 COPY server.js .
 COPY package.json .
 
