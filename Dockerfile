@@ -2,12 +2,12 @@
 FROM node:8.6-slim
 
 WORKDIR /usr/src
-RUN mkdir temp
-RUN mkdir server
+COPY server.js .
+COPY package.json .
 
-COPY server.js ./temp
-RUN npm install pm2 express -g
+RUN npm install
+RUN npm install pm2 -g
 
 EXPOSE 4000
 
-CMD ["pm2-runtime", "./temp/server.js"]
+CMD ["pm2-runtime", "server.js"]
